@@ -1,0 +1,119 @@
+<!-- 
+
+To Do: 
+
+Use the load() function to optimize jQuery
+Create Logo with Illustrator @ school - peep cool c image
+Actually write the shit in the tabs
+
+
+-->
+<!DOCTYPE html> 
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="assets/stylesheets/index.css"/>
+        <link href="https://fonts.googleapis.com/css?family=Oxygen" rel="stylesheet">
+        <meta charset="utf-8">
+        <title>
+            Charlie Sowerby
+        </title>
+        <link rel="icon" href="assets/images/bigC.ico">
+        <script src="assets/scripts/jquery-3.1.1.min.js"></script>
+        <script>  
+            $(document).ready(function(){
+                $(".contentTwo, .contentThree, .contentFour").hide();
+                $(".titleOne").css("text-decoration", "underline");
+                $("#running").hide(); 
+                $("#scouts").hide();
+                
+                $(".titleOne").click(function(){
+                    $("p").hide();
+                    $("#running").hide();
+                    $("#me").show();
+                    $("#scouts").hide();
+                    $(".contentOne").show(); 
+                    $("article").css("text-decoration", "none");
+                    $(".titleOne").css("text-decoration", "underline");
+                })
+                $(".titleTwo").click(function(){
+                    $("p").hide();
+                    $("#running").show();
+                    $("#me").hide();
+                    $("#scouts").hide();
+                    $(".contentTwo").show();
+                    $("article").css("text-decoration", "none");
+                    $(".titleTwo").css("text-decoration", "underline");
+                })
+                $(".titleThree").click(function(){
+                    $("p").hide();
+                    $("#me").hide();
+                    $("#running").hide();
+                    $("#scouts").show();
+                    $(".contentThree").show();
+                    $("article").css("text-decoration", "none");
+                    $(".titleThree").css("text-decoration", "underline");
+                })
+                $(".titleFour").click(function(){
+                    $("p").hide();
+                    $("#running").hide();
+                    $("#scouts").hide();
+                    $("#me").show();
+                    $(".contentFour").show();  
+                    $("article").css("text-decoration", "none");
+                    $(".titleFour").css("text-decoration", "underline");
+                })
+            });     
+        </script>
+    </head>
+    <body>
+        <section class="scroller">
+        <nav> 
+            <img class="logo">
+        </nav>
+        <div class="wrapper">
+            <h1>  
+                <span class="greenText">C</span>harles <br> 
+                <span class="greenText">E</span>dward <br>
+                <span class="greenText">Sowerby</span>
+            </h1>
+            <img class="cartoon" id="me" alt="Me" src="assets/images/artsfest.JPG" height="400">
+            <img class="cartoon" id="running" src="assets/images/running.jpg" height="400">
+            <img class="cartoon" id="scouts" src="assets/images/scouts.JPG" height="400">
+            
+        </div>
+        <div class="line"> </div>
+        
+        <section class=info>  
+            <article class="titleOne"> Charlie </article>
+            <article class="titleTwo"> Running </article>
+            <article class="titleThree"> Scouts </article>
+            <article class="titleFour"> Contact Me </article>
+            <br><br>
+            <p class="contentOne"> 
+            Hi all, I'm an 18 year old senior in high school at University High Lab in Chicago. In the fall I will be moving to Los Angeles to attend UCLA as an undergraduate. I'm a physics enthusiast  with other interests in math and computer science. I am a proficient german speaker as well as an avid runner. I have also participated in the Boy Scouts for 6 years with Troop 599 in Hyde Park.  <br><br> Click on the other links to find out more about my interests. 
+                
+                
+                
+              
+            </p>
+            <p class="contentTwo">
+                I have been running competitively since my freshman year. I have participated in both Track and Cross Country all four years of high school. I have been team captain since the beginning of my junior year. I am a multiple time state qualifier in both Track and Field and Cross Country.
+                
+                <br><br>
+                
+                Pictured above: Boys Cross Country wins 2016 regional title. 
+            </p>
+            <p class="contentThree">
+                I am one of the original members of the newly reinstated Troop 599. I spent six years actively participating in the organization holding positions such as Historian, Guide, Patrol Leader, Senior Patrol Leader, and many others. I achieved the rank of Eagle Scout by completing a project to aid conservation in my neighborhood in which I designed and built my own version of "swarm capture boxes," temporary homes for feral bee colonies in urban environments. 
+                <br><br>
+                Pictured above: Myself and another scout with the finished Eagle Project. 
+            </p>
+            <p class="contentFour">
+                Contact me here: <br><br>
+                Email - charlie.sowerby@gmail.com<br> 
+                Facebook - <a href="https://www.facebook.com/charlie.sowerby.7"> Charlie Sowerby</a>
+            </p>
+        </section>
+        </section>
+    </body>  
+</html>

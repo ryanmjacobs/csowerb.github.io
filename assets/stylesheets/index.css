@@ -1,0 +1,156 @@
+
+/*
+Eric Meyer CSS Reset.
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block; 
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* End Eric Meyer CSS Reset */ 
+
+
+
+
+
+
+p{
+    font-size: 18pt; 
+}
+
+
+
+
+
+
+
+body{
+
+    margin-left: 120px;
+    margin-right: 120px;
+    font-family: sans-serif; 
+    color: #454545;
+    min-width: 700px;
+
+}
+
+.scroller{
+    height: 100vh; 
+}
+
+.wrapper{
+    
+}
+
+h1{
+    margin-top: 60px;
+    margin-bottom: 60px; 
+    font-family: 'Oxygen', Sans-serif;
+    color: inherit;
+    font-size: 80px;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5); 
+    display:inline-block;
+    width: 45%; 
+}
+
+.greenText{
+    color: green; 
+    display: inline; 
+}
+
+.cartoon{
+    height: 350px; 
+    position: absolute;
+    top:26px;
+}
+
+article{
+    display: inline-block; 
+    min-width: 24%;
+    color: green; 
+    text-align: center;
+}
+
+article:hover{
+    cursor: pointer;  
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2); 
+}
+
+.info{
+    background-color: white; 
+    padding: 10px;
+    border-color: green;
+    border-width: 3px;
+    border-style:solid;
+    margin-top: 20px;
+    
+}
+
+.link{
+    background-color: lightblue;
+    display:inline;
+}
+
+.line{
+    border-top-color: #454545;
+    border-top-style: solid;
+    border-top-width: 3px; 
+}
+
+.info{
+    min-height: 200px; 
+}
+
+a{
+    text-decoration: none; 
+    color: inherit; 
+    
+}
+
+a:visited{
+    color: inherit; 
+}
+
+a:hover{
+    color: #333333;
+}
