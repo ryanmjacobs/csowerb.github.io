@@ -25,9 +25,14 @@ function Chip(chipname,width,height){
  this.timer1=null;
 }
 
-function movechip(chipname){
+function movechip(chipname, orchip){
 if (document.getElementById){
-eval("chip="+chipname);
+
+   if (orchip)
+     chip = orchip;
+   else
+     eval("chip="+chipname);
+    
    if (window.innerWidth || window.opera){
 		 pageX=window.pageXOffset;
      pageW=window.innerWidth-40;
@@ -68,10 +73,12 @@ eval("chip="+chipname);
       chip.vy=-vmin-vmax*Math.random();
      }
 
-document.getElementById(chip.named).style.left=chip.xx+"px";
-document.getElementById(chip.named).style.top=chip.yy+"px";
+    console.log(chip.named);
+    document.getElementById(chip.named).style.left=chip.xx+"px";
+    document.getElementById(chip.named).style.top=chip.yy+"px";
 
-
-   chip.timer1=setTimeout("movechip('"+chip.named+"')",100);
+    chip.timer1 = setTimeout(function() {
+        movechip(null, chip);
+    }, 100);
   }
 }

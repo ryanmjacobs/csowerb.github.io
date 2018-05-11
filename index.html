@@ -7,6 +7,15 @@ html, body {
 		    max-width: 100%;
 		    overflow-x: hidden;
 	}
+    .flyimage {
+        width:47;
+        height:68;
+        left: -500px;
+        position:absolute;
+    }
+    .flyimage>img {
+        border: 0;
+    }
 	#archL1 {
 		position: absolute;
 		bottom: -5px;
@@ -285,8 +294,8 @@ function moveOut(whichImg) {
 
 </P>
 
-<DIV ID="flyimage1" STYLE="position:absolute; left: -500px; width:47; height:68;">
-<a href="#"><img src="bird.gif" border=0></a>
+<DIV ID="flyimage1" class="flyimage">
+<a href="#"><img src="bird.gif"></a>
 </DIV>
 
 <script>
@@ -297,6 +306,38 @@ function moveOut(whichImg) {
     };
     set();
     setInterval(set, 2000);
+
+    // create birds
+    var bird = function(cnt) {
+        cnt += 4;
+
+        var a   = document.createElement("a");
+        var div = document.createElement("div");
+        var img = document.createElement("img");
+
+        img.src = "bird.gif";
+        a.appendChild(img);
+        div.appendChild(a);
+        div.class = "flyimage";
+        div.id = "flyimage" + cnt;
+
+        document.body.appendChild(div);
+
+        flyimage = new Chip(div.id,47,68);
+        movechip(div.id, flyimage);
+    }
+
+    function lots_of_birds() {
+        for (var i = 0; i < 10; i++)
+            bird(i);
+    }
+
+    if (window.addEventListener)
+        window.addEventListener("load", lots_of_birds, false)
+    else if (window.attachEvent)
+        window.attachEvent("onload", lots_of_birds)
+    else if (document.getElementById)
+        window.onload=lots_of_birds
 
     // every time we click, increase the font size
     document.getElementById("door").onclick = function() {
