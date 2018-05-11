@@ -206,7 +206,7 @@ function moveOut(whichImg) {
 <!-- <FONT SIZE=7>&nbsp;</FONT> -->
 </TD></TR>
 <TR><TD ALIGN=CENTER>
-<A HREF="../main.html"
+<A HREF="#" id="door"
  onMouseover= "moveIn('pic1'); return true"
  onMouseout= "moveOut('pic1');"><IMG NAME="pic1" SRC="door.gif" HEIGHT=144 WIDTH=80 BORDER=0 ALT="yeet"></A></TD></TR></TABLE>
 </SPAN></SPAN></SPAN>
@@ -290,12 +290,19 @@ function moveOut(whichImg) {
 </DIV>
 
 <script>
+    // image cycle
     var set = function() {
         var el = document.getElementById("n");
         el.src = "2n" + String(Math.floor(Math.random()*4+1)) + ".png";
     };
     set();
     setInterval(set, 2000);
+
+    // every time we click, increase the font size
+    document.getElementById("door").onclick = function() {
+        var ls = parseInt(document.body.style.letterSpacing) || 0;
+        document.body.style.letterSpacing = (ls+5) + "px";
+    };
 </script>
 
 </Body>
