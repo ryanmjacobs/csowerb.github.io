@@ -272,7 +272,7 @@ function moveOut(whichImg) {
 <table !border=10 bgcolor="" bordercolor="" cellspacing=5 cellpadding=5><tr><td align="center">
 <!-- <font face="Arial" size=5><b><i>See lists of our other thrilling pages...</i></b></font><br> -->
 
-<P ALIGN="center"><A HREF="#"><IMG id="2n" HEIGHT=175 BORDER=0></A></P>
+<P ALIGN="center"><A HREF="#"><IMG id="n" HEIGHT=175 BORDER=0></A></P>
 <div align="center"><H3><b>
 <a href="#">YEET</a> &#149;
 <a href="#">ON</a> &#149;
@@ -290,8 +290,12 @@ function moveOut(whichImg) {
 </DIV>
 
 <script>
-    var el = document.getElementById("2n");
-    el.src = "2n" + String(Math.floor(Math.random()*4+1)) + ".png";
+    var set = function() {
+        var el = document.getElementById("n");
+        el.src = "2n" + String(Math.floor(Math.random()*4+1)) + ".png";
+    };
+    set();
+    setInterval(set, 3000);
 </script>
 
 </Body>
