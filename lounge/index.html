@@ -3,13 +3,29 @@
 		<title>
 			Lounge_stagram
 		</title>
+
+		<script type="text/javascript">
+		var colors = ["red", "orange", "yellow", "green", "blue", "indigo", "violet"];
+
+		var i = 1;
+
+		window.setInterval(function(){
+			document.body.style.backgroundColor = colors[i];
+			i++;
+			if (i === colors.length){
+				i=0;
+			}
+		}, 300);
+		</script>
+
 		<style>
 			body{
 				background-color: red;
+				transition: background-color 0.1s.  
 			}
 
 			h1{
-				background-color: green;
+				background-color: black;
 				color: yellow;
 				text-align: center;
 				border-style: solid;
